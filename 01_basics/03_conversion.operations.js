@@ -61,4 +61,3 @@ let number = 200
 console.log(gameCounter);
 console.log(number);
 // study about this in mdn docs.
-
