@@ -68,4 +68,23 @@ console.log(Object.entries(tinderUser));
 
 //Objects return keys values and entries and other stuff in the form of arrays. and for entries it returns an array for each key value pair. 
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+console.log(tinderUser.hasOwnProperty("isLoggedIn")); 
+
+// to check whether an object has a certain property or not. 
+
+
+
+const course = {
+    courseName: "js in hindi",
+    price: "999",
+    courseInstructor: "Karan"
+}
+
+// console.log(course.courseInstructor); this is one of the methods we could use to print the value in an object. But baar baar likhne se accha ek baar define kar lete hai iss new method se. Isme we can modify the name according to our convinience aur value same hee ayegi. This process is called **Object Destructuring**. 
+
+const {courseInstructor} = course;
+
+const {courseInstructor: instructor} = course;
+
+console.log(courseInstructor);
+console.log(instructor);
