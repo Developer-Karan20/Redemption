@@ -87,3 +87,41 @@ function loginUserMessage(username = "Pal") {
 console.log(loginUserMessage()); 
 
 // abhi ye latest hai to iss wajah se all three functions mein same value display ho rhi hai. but as soon as we give username a value...this is pal will be overwritten. 🤘🤘
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++
+
+// ab functions ko use karke OBJECTS and ARRAYS ko bhi access kiya ja sakta hai. 
+
+function calculateCartPrice(...num1) {
+    return num1;
+}
+
+console.log(calculateCartPrice(200, 300, 400, 500));
+// this returns all the value inside an array and we can later perform operations inside array to calculate the total. Same goes for OBJECTS as well. 
+
+const user = {
+    userName: "Karan",
+    price: 199
+}
+
+function handleObject(anyObject) {
+    console.log(`Username is ${anyObject.userName} and price is ${anyObject.price}`);
+}
+
+handleObject(user);
+
+handleObject({
+    username: "sam",
+    price: 399
+})
+
+const myNewArray = [200, 400, 100, 600];
+
+function returnSecondValue(getArray) {
+    return getArray[1];
+}
+
+console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 400, 500, 1000]));
+
+
