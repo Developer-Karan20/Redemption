@@ -92,6 +92,9 @@ console.log(loginUserMessage());
 
 // ab functions ko use karke OBJECTS and ARRAYS ko bhi access kiya ja sakta hai. 
 
+
+// ye 3 dots hee spread operator hai aur yahi rest operator bhi hai depend karta hai situation pe. 
+
 function calculateCartPrice(...num1) {
     return num1;
 }
