@@ -41,3 +41,27 @@ false == "" gives true
 
 0 == "" gives true 
 */
+
+
+// Nullish Coalescing Operator (??) : it is used to counter null and undefined...what it basically does is skips null and undefined and executes if any other functions or value if provided next to it. 
+
+let val1; 
+val1 = 5 ?? 10;
+val1 = null ?? 10;
+val1 = undefined ?? 15;
+val1 = null ?? 10 ?? 20; // it prints the value which is written at latest. 
+
+console.log(val1);
+
+
+// Terniary Operator
+
+// condition ? true : false
+
+const iceTeaPrice = 100;
+
+iceTeaPrice <= 80 ? console.log("less than 80"): console.log("more than 80");
+
+const marks = 90;
+
+marks >=90 ? console.log("grade : A"): console.log("grade B");
