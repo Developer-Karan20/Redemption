@@ -32,17 +32,17 @@ coding.forEach( (item, index, arr) => {
 const myCoding = [
     {
         languageName: "javascript",
-        languageFileName: "js"
+        languageFileName: "js",
     },
         
     {
         languageName: "java",
-        languageFileName: "java"
+        languageFileName: "java",
     },
 
     {
         languageName: "python",
-        languageFileName: "py"
+        languageFileName: "py",
     },
 ]
 
