@@ -5,10 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Learning</title>
 </head>
-<body>
+<body style="background-color: #212121; color: white;">
     <div class="bg-black">
-        <h1 class="heading">DOM learning on Chai aur Code</h1>
+        <!--we can change the class and id of an element by using the setAttribute method in the console or in a script file-->
+        
+
+        <!-- (innerText) property use karne se sirf wahi text dikhega jo us element andar hai...mtlb hidden text nahi dikhega...par (textContent) se wo text bhi dikhega jo hidden hai...jaise is case mein span ko hidden kar diya hai par (textContent) fir bhi show kar rha hai console mein. 
+        
+        aur wahi (innerHTML) use kar par pura ka pura HTML hee dikh jaata hai. 
+
+
+        node list and HTML collections are not pure arrays. We can identify them with the help of prototyle section. and to make any changes like in the styles of nodelist or html collection we have to declare the index of the element we want to make changes in. like if an html page has 3 h1 tags so if we want to make changes on the first one we will have give the index number 0 in order to do so. for eg : myH1[0].style.color = "green"; this is the only way it works. though we can apply forEach() loop in nodelist but that is not the case with HTML collection cuz it does not support the forEach() loop. so we have to first convert an HTML collection into an array. for eg - Array.from(tempClassList) inside the parenthesis we have to write the name of HTML collection we want to convert into an array and this will convert it easily in no time. 
+
+        
+
+        -->
+
+
+        <h1 id="title" class="heading">DOM learning on Chai aur Code <span style="display: none">test text</span></h1>
+        
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
         <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-items">one</li>
+            <li class="list-items">two</li>
+            <li class="list-items">three</li>
+            <li class="list-items">four</li>
+        </ul>
     </div>
 </body>
 </html>
