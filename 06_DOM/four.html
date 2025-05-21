@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM</title>
+</head>
+<body style="background-color: #212121; color: white">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguage(lang) {
+        const li = document.createElement("li");
+        li.innerHTML = `${lang}`;
+        document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("python");
+    addLanguage("typescript");
+    addLanguage("java");
+
+    //we can write the above code in a more optimised way....for better browser rendering. we are not traversing the whole tree like the above one, Always recommended. 
+    function addOptLanguage(lang) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(lang)); //ek naya text node direct inject kar diya. 
+        document.querySelector(".language").appendChild(li);
+    }
+    addOptLanguage("goLang");
+
+</script>
+</html>
