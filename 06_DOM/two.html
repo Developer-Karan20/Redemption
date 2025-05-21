@@ -27,11 +27,23 @@ for (let i = 0; i < parent.children.length; i++) {
     
 }
 
+/*yha hum parent se child par move kar rhe hai*/
+
 parent.children[1].style.color = "orange";
 
 console.log(parent.firstElementChild); /* will print the first complete HTML the monday one*/
 
 console.log(parent.lastElementChild); /* will print the last complete HTML the thursday one*/
+
+//yha hum child se parent par move kar rhe hai.
+const dayOne = document.querySelector(".day");
+console.log(dayOne);
+console.log(dayOne.parentElement);
+console.log(dayOne.nextElementSibling); // this will print the HTML of next element. 
+
+// nodelist ek complex tree structure hai. jo har ek event ko count karta hai jaise...enter press karna, line break ek hee baar count hota hai uske baad chahe kitne bhi line break dedo koi farak nahi padta. 
+
+console.log("NODES: ", parent.childNodes);
 </script>
 
 </html>
