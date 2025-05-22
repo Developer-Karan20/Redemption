@@ -29,5 +29,26 @@
     }
     addOptLanguage("goLang");
 
+
+    //Edit
+    const SecondLang = document.querySelector("li:nth-child(2)");
+    //SecondLang.innerHTML = "Mojo";
+    const newli = document.createElement("li");
+    newli.textContent = "Mojo";
+    SecondLang.replaceWith(newli);
+
+    //Edit
+    const firstLang = document.querySelector("li:first-child");
+    // const newli2 = document.createElement("li");
+    // newli2.textContent = "typescript";
+    // firstLang.replaceWith(newli2);
+
+    //another method 
+    firstLang.outerHTML = "<li>TypeScript</li>";
+
+
+    //remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove(); //the element will be removed fromt the DOM
 </script>
 </html>
