@@ -22,7 +22,7 @@
     const changeMe = setTimeout(changeText, 2000);
 
     document.querySelector("#stop").addEventListener("click", function() {
-        clearTimeout(changeMe);
+        clearTimeout(changeMe); //it wants reference of the set timeout that it has to stop. 
         console.log("STOPPED");
     });
 </script>
