@@ -12,10 +12,29 @@
 </body>
 
 <script>
-   const sayDate = function(str) {
-    console.log(str, Date.now());
+   // starting and stopping printing in a certain time interval using js functions. 
+
+   let intervalId; //globally declared to access into local scope. 
+
+   function startInterval() {
+    intervalId = setInterval(function() {
+        console.log("Karan", Date.now());
+    }, 1000);
    }
 
-   setInterval(sayDate, 5000);
+   function stopInterval() {
+    clearInterval(intervalId);
+    console.log("interval stopped");
+   }
+
+   document.querySelector("#start").addEventListener("click", function() {
+    startInterval();
+   });
+
+   document.querySelector("#stop").addEventListener("click", function() {
+    stopInterval();
+   });
+
+   
 </script>
-</html>
+</html>  
