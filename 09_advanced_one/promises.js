@@ -105,7 +105,7 @@ getAllUsers();
 
 
 
-//using .then() and .catch() 
+//using .then() and .catch() : relatively new feature for node js. 
 
 fetch("https://api.github.com/users/hiteshchoudhary")
 .then((response) => {
@@ -114,4 +114,6 @@ fetch("https://api.github.com/users/hiteshchoudhary")
 .then((data) => {
     console.log(data); //response handle karne ke liye..thenable bolte hai iss process ko. data likhna jaroori nahi hai kuch bhi likh sakte hai. 
 })
-.catch((error) => console.log(error)) //can write in single line. 
+.catch((error) => console.log(error)); //can write in single line. 
+
+// wo diagram wala tha na...usme fetch ke liye special queue bnti hai........(wo CB wala diagram)...jyadatar isko micro task queue bolte hai ya bol sakte hai...priority queue. fetch se jo bhi kaam hota hai wo isme aata hai...isliye fetch ko pehle priority di jaati hai call stack mein..baaki functions ki same timing hai tab bhi pehle fetch hee execute hoga. lekin jyada time le rha hai fir to bhai....baaki functions execute ho jayenge. 
