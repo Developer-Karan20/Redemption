@@ -21,8 +21,37 @@ console.log(user.getUserDetails()); //method hai to run karana padega khali refe
 console.log(this); //node environment mein empty object milta hai...par browser mein window object milta hai jisme bhar bhar ke methods hote hai aur baaki cheeze bhi hoti hai. 
 
 
-//CONSTRUCTOR FUNCTIONS
+//CONSTRUCTOR FUNCTIONS - naya context banane ke kaam aata hai. har baar ek naya instance deta hai. 
 
-function User(username, logincount, isloggedin) {
-    this.username = userName,
+function User(username, loginCount, isLoggedIn) {
+    //LHS wala variable hai aur RHS wala vo value hai jo hum LHS ko parse karke de rhe hai. wo jo blank object tha na..uske andar this ki wajah se values store hoti rehti hai.
+    this.username = username;
+    this.logginCount = loginCount;
+    this.isLoggedIn = isLoggedIn;
+    this.greeting = function() {
+        console.log(`welcome ${this.username}`);
+    }
+
+    return this //ye karte hee wo jo object tha wo pass on ho gaya...ab agar koi developer chahe to uske andar ye sab details access kar sakta hai. ye use nahi bhi karenge tab bhi implicitly defined hota hai...by default return to hoga hee. 
 }
+
+
+const userOne = new User("hitesh", 12, true);
+const userTwo = new User("ChaiAurCode",11, false); //values got overwritten. that is why we use new keyword everytime we create a new user or promise. jaise hee new keyword use karenge to empty object create hota hai jisko instance bola jaata hai: ye rahe steps.
+
+/* step 1: new keyword creates an empty object. 
+
+step 2: ek constructor function call hota hai new keyword ke kaaran ye hmare saare arguments ko pack karta hai aur hume de deta hai. 
+
+step 3: this keyword use karte hee jo bhi saare arguments hai wo saare arguments empty object ke andar inject ho jaate hai. 
+
+step 4: hume function ke andar sab values mil jaati hai. */
+
+console.log(userOne.constructor);
+console.log(userTwo);
+
+//CONSTRUCTOR is nothing but reference hoti hai khud hee ke baare mein...jaise yha par user ke baare mein. 
+
+
+
+
