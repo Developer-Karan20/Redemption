@@ -53,5 +53,14 @@ console.log(userTwo);
 //CONSTRUCTOR is nothing but reference hoti hai khud hee ke baare mein...jaise yha par user ke baare mein. 
 
 
+//JAVASCRIPT has a prototypal behaviour....js haar nahi manti hai jab tak aap jo cheez dhund rhe ho wo use mil na jaaye. wo parents ko access karti hai, grandparents ko access karti hai aur uper jaati rehti hai jab tak usko null value na mil jaye. 
+
+//PROTOTYPE is the one which gives the access of new keyword, classes isi se mili hai. this isi ke through kaam kar rha hai...js mein prototypal inheritance ya inheritance isi ke through aa rha hai. 
+
+// at the end of the day we can say that js ke andar har ek cheez ek object hai....aur object ke pass jo properties avaiable hai wo array ke andar bhi available hai aur string ke andar bhi available hai. usable hai nahi hai wo alag baat hai.
+
+
+
+
 
 
