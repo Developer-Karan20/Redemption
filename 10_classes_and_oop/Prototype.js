@@ -71,7 +71,7 @@ let anotherUsername = "chaiAurCode     ";
 String.prototype.trueLength = function() {
     console.log(`${this}`); //this mujhe access de rha hai chai aur code ka...kyuki anotherUsername ke andar usi kar reference hai. reference change karunga to results bhi changed dekhne ko milenge...line no. 79 
 
-    console.log(`True length is: ${this.trim().length}`);
+    console.log(`True length is: ${this.trim().length}`);  //this bta rha hai current execution context jaisa abhi hai anotherUsername mein chai aur code. 
 }
 
 
