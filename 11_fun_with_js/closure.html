@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Closure aur chai</title>
 </head>
-<body>
+<body style="background-color: #212121;">
     <script>
         //classical example of lexical scoping in javascript where - when inner functions can use variables from the outer functions they're inside of. codition ye hai ki functon ke andar function hone chahiye...ab chahe wo 2 ho ya 3. Parent function se kuch bhi share kar lenge par bhai bhai apaas mein share nahi karenge bhai. 
 
@@ -61,6 +61,35 @@
 
         const gali_storer = gali();
         gali_storer();
+    </script>
+
+
+
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    <script>
+       document.getElementById("orange").onclick = function() {
+        document.body.style.backgroundColor = "Orange";
+       }
+
+       document.getElementById("green").onclick = function() {
+        document.body.style.backgroundColor = "green";
+       }
+
+       
+       //yha pe closure use huwa hai. 
+
+       function clickHandler(color) {
+        // document.body.style.backgroundColor = `${color}`;
+
+        return function() {
+            document.body.style.backgroundColor = `${color}`;
+        }
+       }
+
+       document.getElementById("orange").onclick = clickHandler("orange"); //pura function aur uska lexical scope iske adar aa gaya aur outer function ke variable ka access bhi mil gya. jo ki color of the body hoga. 
+
+       document.getElementById("green").onclick = clickHandler("green"); //pura function aur uska lexical scope iske adar aa gaya aur outer function ke variable ka access bhi mil gya. jo ki color of the body hoga.
     </script>
 </body>
 </html>
