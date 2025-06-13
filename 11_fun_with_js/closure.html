@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body>
+    <script>
+        //classical example of lexical scoping in javascript where - when inner functions can use variables from the outer functions they're inside of. codition ye hai ki functon ke andar function hone chahiye...ab chahe wo 2 ho ya 3. Parent function se kuch bhi share kar lenge par bhai bhai apaas mein share nahi karenge bhai. 
+
+        function outer(){
+            let userName = "karan";
+            // console.log("OUTER", secret); //chote to bado se mang sakte hai par bade choto se nahi maang sakte. 
+            function inner(){
+                let secret = "my123";
+                console.log("inner", userName); //will run cuz it is inside the outer function so it can access the variables of the outer function as well. 
+            }
+            // function inner2(){
+            //     console.log("inner2", userName);
+            //     // console.log(secret);
+            // }
+
+            inner();
+            // inner2();
+        }
+        outer();
+        // console.log("TOO OUTER", userName); //will certainly generate error cuzz it is outside the scope of the function. 
+
+
+        //CLOSURES - Closures let inner functions access outer variables even after the outer function has finished running. The inner function remembers its original scope.”
+
+        function makeFunc() {
+            const name = "Mozilla";
+
+            function displayName() {
+                console.log(name);
+            }
+            return displayName; //inner functions reference is asked to return which hold the outer variable called name. 
+        }
+        
+        //The closure zone starts from herer. 
+        const myFunc = makeFunc(); //yha par scope end ho gaya outer function ka and uske sath sath humne ukso ek variable mein store bhi kar liya hai.
+
+        myFunc(); //yha jab humne uss varible ko as a function call lagaya to....isne inner function ka reference aur outer funtion ka varible hold karke rakha hai to ye dono ko print kar dega. 
+
+
+
+
+        function gali() {
+            const name = "Hatt bsdk";
+            const newName = "Maa chuda";
+
+            function callGali() {
+                console.log(newName);
+                console.log(name);
+            }
+
+            return callGali;
+        }
+
+        const gali_storer = gali();
+        gali_storer();
+    </script>
+</body>
+</html>
